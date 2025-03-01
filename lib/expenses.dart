@@ -1,8 +1,9 @@
-import 'package:expanse_tracker/main.dart';
+
 import 'package:expanse_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expanse_tracker/widgets/expenses_list.dart';
 import 'package:expanse_tracker/models/expense.dart';
+import 'package:expanse_tracker/widgets/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -90,10 +91,11 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('The chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           ),
+      
         ],
       ),
     );
